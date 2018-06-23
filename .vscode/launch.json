@@ -4,32 +4,43 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-        
         {
-            "type": "gdb",
-            "request": "launch",
-            "name": "gdb: Launch Program",
-            "target": "./hw2q1",
-            "cwd": "${workspaceRoot}"
-        },
-        {
-            "type": "gdb",
-            "request": "launch",
-            "name": "Launch Program",
-            "target": "./hw1q1",
-            "cwd": "${workspaceRoot}"
-        },
-        {
-            "name": "(lldb) Launch",
+            "name": "(gdb) 1Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "./hw2q1",
+            "program": "${workspaceFolder}/h5q2",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
             "environment": [],
             "externalConsole": true,
-            "MIMode": "lldb"
-        }
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "name": "(gdb) h5q2",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/h5q2",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        }       
     ]
 }
